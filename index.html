@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romo Mobile Mechanic Services</title>
+    <title>Romo Repair - Mobile Mechanic</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -11,12 +11,12 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f1f5f9; /* Slate 100 */
+            background-color: #f3f4f6; /* Gray 100 */
         }
         /* Custom button styling for interactivity */
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
         /* Style for the card sections */
         .service-card {
@@ -25,56 +25,61 @@
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            border-color: #dc2626; /* Red-600 hover effect */
         }
     </style>
 </head>
-<body class="min-h-screen antialiased">
+<body class="min-h-screen antialiased flex flex-col">
 
     <!-- Header & Contact Bar -->
-    <header class="bg-gray-900 shadow-lg sticky top-0 z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center flex-wrap">
-            <h1 class="text-2xl font-bold text-white tracking-tight">
-                <span class="text-yellow-400">Romo</span> Mobile Mechanic
+    <header class="bg-black shadow-lg sticky top-0 z-50 border-b-4 border-red-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center flex-wrap">
+            <h1 class="text-2xl font-bold text-white tracking-tight uppercase">
+                <span class="text-red-600">Romo</span> Repair
             </h1>
-            <!-- Contact Info (Visible on all sizes, prominent on mobile) -->
-            <div class="text-sm mt-2 sm:mt-0">
-                <p class="text-white font-semibold flex items-center">
-                    <!-- Lucide Wrench Icon (using inline SVG for single file) -->
-                    <svg class="w-5 h-5 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+            <!-- Contact Info -->
+            <div class="text-sm mt-2 sm:mt-0 text-right">
+                <p class="text-gray-300 font-semibold flex items-center justify-end">
+                    <!-- User Icon -->
+                    <svg class="w-4 h-4 mr-2 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
                     Angel Romo
                 </p>
-                <a href="tel:5209891529" class="text-yellow-400 hover:text-yellow-300 font-bold transition duration-300">
-                    Call Now: 520-989-1529
+                <a href="tel:5209891529" class="text-white hover:text-red-500 font-bold text-lg transition duration-300 flex items-center justify-end gap-2">
+                   <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                   520-989-1529
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Main Content Area -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
 
         <!-- Hero Section -->
-        <section class="text-center mb-6 p-8 bg-white rounded-xl shadow-xl border-t-4 border-yellow-500">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-4">
-                Quality Auto Repair Right at Your Door!
-            </h2>
-            <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-                No towing fees, no waiting rooms. Romo Mobile Mechanic brings expert service directly to your home or office. **Note:** A small upfront fee applies to all service calls (see below).
-            </p>
-            <!-- UPDATED: Button now links to the Google Form -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfN8jU2UvMBeDhBlJxiAL8LDeWH8C_eE5KsQ5O4P0GjxCxwKg/viewform?usp=publish-editor" target="_blank" class="inline-block px-8 py-3 text-lg font-bold text-gray-900 bg-yellow-400 rounded-full shadow-lg btn-primary hover:bg-yellow-300 transition duration-300">
-                Book Service Today
-            </a>
+        <section class="text-center mb-8 p-10 bg-white rounded-lg shadow-xl border-t-8 border-red-600 relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+                    MOBILE AUTO REPAIR
+                </h2>
+                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto font-medium">
+                    Skip the shop. We bring the repair to <span class="text-red-600 font-bold">you</span>.
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfN8jU2UvMBeDhBlJxiAL8LDeWH8C_eE5KsQ5O4P0GjxCxwKg/viewform?usp=publish-editor" target="_blank" class="inline-block px-10 py-4 text-lg font-bold text-white bg-red-600 rounded-md shadow-lg btn-primary hover:bg-red-700 transition duration-300 uppercase tracking-wide">
+                    Book Service Now
+                </a>
+            </div>
         </section>
         
-        <!-- NEW: Upfront Service Fee Banner -->
-        <div class="mb-12 p-4 sm:p-6 bg-red-100 border-l-4 border-red-500 rounded-lg shadow-md">
-            <div class="flex items-center">
-                <svg class="w-6 h-6 text-red-500 mr-3 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <!-- Upfront Service Fee Banner (Dark styling for contrast against red theme) -->
+        <div class="mb-12 p-6 bg-gray-900 border-l-8 border-red-600 rounded-r-lg shadow-lg">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div class="bg-red-600 p-3 rounded-full shrink-0">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
                 <div>
-                    <h3 class="text-xl font-bold text-red-800 mb-1">Upfront Service Fee: $35</h3>
-                    <p class="text-red-700 text-sm sm:text-base">
-                        This **non-refundable** fee covers travel and initial diagnostics. **It is fully deducted from the cost of any purchased service.** If no service is performed, the fee remains non-refundable.
+                    <h3 class="text-xl font-bold text-white mb-1">Upfront Service Fee: $35</h3>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                        This <strong class="text-red-500">non-refundable</strong> fee covers travel & diagnostics. <br class="hidden sm:block">It is <span class="text-white font-bold underline decoration-red-600">fully deducted</span> from the final cost of any purchased service.
                     </p>
                 </div>
             </div>
@@ -83,69 +88,78 @@
         <!-- Service Cards Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- Card 1: Vehicle Inspection (Price is before $35 deduction) -->
-            <div class="service-card bg-white p-6 rounded-xl shadow-lg border border-gray-200">
-                <div class="text-4xl text-yellow-500 mb-3">🛠️</div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-3">Comprehensive Inspection</h3>
-                <p class="text-gray-600 mb-4">
-                    Thorough bumper-to-bumper check of major components. Essential for pre-purchase or troubleshooting.
+            <!-- Card 1: Inspection -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-md border-2 border-transparent hover:border-red-600 group">
+                <div class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-100 transition-colors">
+                    <span class="text-3xl">🔍</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">Inspection</h3>
+                <p class="text-gray-600 mb-6">
+                    Comprehensive diagnostics and bumper-to-bumper check. Essential for troubleshooting.
                 </p>
-                <div class="flex justify-between items-center mt-auto pt-3 border-t border-gray-100">
-                    <div>
-                        <span class="text-xl font-extrabold text-gray-900">$50.00</span>
-                        <p class="text-xs text-red-500 font-semibold mt-1">($15 after $35 fee deduction)</p>
+                <div class="mt-auto pt-4 border-t border-gray-100">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <span class="text-2xl font-extrabold text-gray-900">$50<span class="text-sm font-normal text-gray-500">.00</span></span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Flat Rate</span>
                     </div>
-                    <span class="text-sm font-medium text-gray-500">Flat Rate</span>
+                    <p class="text-xs text-red-600 font-bold bg-red-50 inline-block px-2 py-1 rounded">
+                        Final: $15 <span class="font-normal text-gray-500">(after fee deduction)</span>
+                    </p>
                 </div>
             </div>
 
-            <!-- Card 2: Customer-Provided Oil Change (Price is before $35 deduction) -->
-            <div class="service-card bg-white p-6 rounded-xl shadow-lg border border-gray-200">
-                <div class="text-4xl text-blue-500 mb-3">🛢️</div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-3">Customer Oil Change</h3>
-                <p class="text-gray-600 mb-4">
-                    You supply the oil and filter, and I'll handle the professional, fast change right at your location.
+            <!-- Card 2: Customer Oil -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-md border-2 border-transparent hover:border-red-600 group">
+                <div class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-100 transition-colors">
+                    <span class="text-3xl">🛢️</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">Customer Oil Change</h3>
+                <p class="text-gray-600 mb-6">
+                    You supply the oil & filter, I handle the labor. Fast, professional, and clean.
                 </p>
-                <div class="flex justify-between items-center mt-auto pt-3 border-t border-gray-100">
-                    <div>
-                        <span class="text-xl font-extrabold text-gray-900">$40.00</span>
-                        <p class="text-xs text-red-500 font-semibold mt-1">($5 after $35 fee deduction)</p>
+                <div class="mt-auto pt-4 border-t border-gray-100">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <span class="text-2xl font-extrabold text-gray-900">$40<span class="text-sm font-normal text-gray-500">.00</span></span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Labor Only</span>
                     </div>
-                    <span class="text-sm font-medium text-gray-500">Labor Fee</span>
+                    <p class="text-xs text-red-600 font-bold bg-red-50 inline-block px-2 py-1 rounded">
+                        Final: $5 <span class="font-normal text-gray-500">(after fee deduction)</span>
+                    </p>
                 </div>
             </div>
 
-            <!-- Card 3: Full-Service Oil Change (Price is before $35 deduction) -->
-            <div class="service-card bg-white p-6 rounded-xl shadow-lg border border-gray-200">
-                <div class="text-4xl text-red-500 mb-3">⚙️</div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-3">Mechanic-Provided Oil Change</h3>
-                <p class="text-gray-600 mb-4">
-                    Full-service oil and filter change. Includes high-quality conventional or synthetic oil and filter. Price depends on specific vehicle needs.
+            <!-- Card 3: Full Service -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-md border-2 border-transparent hover:border-red-600 group">
+                <div class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-100 transition-colors">
+                    <span class="text-3xl">🔧</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">Full Oil Change</h3>
+                <p class="text-gray-600 mb-6">
+                    I provide the oil and filter. Price varies based on vehicle type and oil requirements.
                 </p>
-                <div class="flex justify-between items-center mt-auto pt-3 border-t border-gray-100">
-                    <div>
-                        <span class="text-xl font-extrabold text-gray-900">$75 - $160</span>
-                        <p class="text-xs text-red-500 font-semibold mt-1">(Deduct $35 from final total)</p>
+                <div class="mt-auto pt-4 border-t border-gray-100">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <span class="text-2xl font-extrabold text-gray-900">$75<span class="text-lg text-gray-400">-</span>$160</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Parts & Labor</span>
                     </div>
-                    <span class="text-sm font-medium text-gray-500">Price Varies</span>
+                    <p class="text-xs text-red-600 font-bold bg-red-50 inline-block px-2 py-1 rounded">
+                        $35 deducted from total
+                    </p>
                 </div>
             </div>
             
         </div>
         
-        <!-- Contact and CTA Section -->
-        <section id="contact" class="mt-12 p-8 bg-gray-800 rounded-xl shadow-2xl text-center">
-            <h3 class="text-3xl font-extrabold text-white mb-4">Ready for Convenient Service?</h3>
-            <p class="text-gray-300 mb-6">
-                Don't wait! Get reliable mobile repair and maintenance services.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <!-- Kept the phone number here for quick calls -->
-                <a href="tel:5209891529" class="w-full sm:w-auto px-6 py-3 bg-yellow-400 text-gray-900 font-bold rounded-full shadow-md btn-primary hover:bg-yellow-300 transition duration-300">
-                    Call Angel: 520-989-1529
-                </a>
-                <a href="mailto:example@email.com" class="w-full sm:w-auto px-6 py-3 bg-gray-600 text-white font-bold rounded-full shadow-md btn-primary hover:bg-gray-500 transition duration-300">
-                    Send an Email
+        <!-- Contact CTA -->
+        <section class="mt-16 p-10 bg-black rounded-lg shadow-2xl text-center border-b-4 border-red-600 relative overflow-hidden">
+             <!-- Decorative background element -->
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-black via-red-600 to-black"></div>
+
+            <h3 class="text-3xl font-bold text-white mb-6">Need a Mechanic?</h3>
+            <div class="flex justify-center items-center">
+                <a href="tel:5209891529" class="w-full sm:w-auto px-8 py-4 bg-red-600 text-white font-bold rounded shadow hover:bg-red-700 transition duration-300 uppercase tracking-wider flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    Call: 520-989-1529
                 </a>
             </div>
         </section>
@@ -153,10 +167,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 mt-10 py-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
-            <p class="text-sm">&copy; 2025 Romo Mobile Mechanic. All rights reserved.</p>
-            <p class="text-xs mt-1">Serving Tucson and surrounding areas.</p>
+    <footer class="bg-black py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm">&copy; 2025 Romo Repair. All rights reserved.</p>
+            <p class="text-gray-600 text-xs mt-2">Serving Tucson and surrounding areas.</p>
         </div>
     </footer>
 

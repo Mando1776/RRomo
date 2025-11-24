@@ -26,13 +26,22 @@
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
             border-color: #dc2626; /* Red-600 hover effect */
         }
+        /* Ensure logo container has space */
+        .logo-container {
+            height: 3rem; /* Matches h-12 (3rem) for consistency */
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 <body class="min-h-screen antialiased flex flex-col">
 
     <!-- Header & Contact Bar --><header class="bg-black shadow-lg sticky top-0 z-50 border-b-4 border-red-600">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center flex-wrap">
-            <!-- Logo - Replaced text with image --><img src="https://i.imgur.com/G55n90y.png" alt="Romo Repair Logo" class="h-10 sm:h-12 max-w-full">
+            <!-- Logo - FIXED: Now uses relative path to file hosted in the repository -->
+            <div class="logo-container">
+                <img src="./images/logo.jpeg" alt="Romo Repair Logo" class="h-10 sm:h-12 max-w-full">
+            </div>
             
             <!-- Contact Info --><div class="text-sm mt-2 sm:mt-0 text-right">
                 <p class="text-gray-300 font-semibold flex items-center justify-end">
